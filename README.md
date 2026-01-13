@@ -8,7 +8,7 @@ claude code from a container intended to run on linux with wayland
 `make run`
 
 ### Basic info
-* This container mounts the home directory of the user running the container and allows the user to run the chromium browser via claude code for authentication purposes. Warning: this setup/configuration may not be the most secure for running a kiosk browser. It is intended purely as a way to isolate claude code from the system it is running on.
+* This container mounts the home directory of the user running the container and allows the user to run the chromium browser via claude code for authentication purposes. Warning: this setup/configuration may not be the most secure for running a kiosk browser. It is intended purely as a way to isolate claude code from being installed directly on the system it is running on. 
 * There are configuration parameters in the `Makefile` 
     * `IMAGE_NAME` this is the name you want for the docker image
     * `DEVELOPMENT` this is the name of the directory where code is stored - I use a shared directory for multiple user personas. For most individual developers who keep their code in their home directory, this is unnecessary but may need to be set or removed (including podman command arguments) for the run to work.
