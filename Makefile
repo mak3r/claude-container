@@ -17,10 +17,9 @@ build:
 PHONY: run
 
 run:
-	podman run -it --rm \
+	podman run -it \
        	--env DISPLAY=${DISPLAY} \
 	--network host \
-	--volume /tmp/.X11-unix:/tmp/.X11-unix \
 	--user $(HOST_UID):$(HOST_GID) \
 	--userns=keep-id \
 	--cap-add=SYS_PTRACE \
